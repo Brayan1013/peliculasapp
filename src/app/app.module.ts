@@ -14,6 +14,7 @@ import { APP_ROUTING } from './app.routes';
 import {ObtnerPeliculasService} from './services/obtner-peliculas.service';
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
 import { BuscarComponent } from './components/buscar/buscar.component';
+import { NiñosComponent } from './components/niños/niños.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { BuscarComponent } from './components/buscar/buscar.component';
     HomeComponent,
     NavbarComponent,
     PeliculaComponent,
-    BuscarComponent
+    BuscarComponent,
+    NiñosComponent
   ],
   imports: [
     BrowserModule,
