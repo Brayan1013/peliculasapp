@@ -1,0 +1,37 @@
+
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <input name="nombre" (keyup.enter)="buscar()"
+    class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+     [(ngModel)]="nombrePelicula" name="nombre">
+    <button (click)="buscar()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <h1>Resultado de la busqueda</h1>
+      <hr class="bg-danger">
+    </div>
+  </div>
+
+  <div class="alert alert-warning" role="alert" *ngIf="peliculasObtenidas.length==0">
+  No se encontrarorn resultados
+</div>
+
+
+
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let resultado of peliculasObtenidas">
+      <div class="card m-3" style="width: 18rem;">
+        <img class="card-img-top" src="http://image.tmdb.org/t/p/w300{{resultado.poster_path}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{resultado.title}}</h5>
+          <button  (click)= "navegar(resultado.id)" class="btn btn-outline-info" type="button" name="button">Detalles</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

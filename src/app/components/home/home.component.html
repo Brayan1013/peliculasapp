@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <h1>Peliculas populares</h1>
+      <hr class="bg-danger">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let popular of populares">
+      <div class="card m-3" style="width: 18rem;">
+        <img class="card-img-top" src="http://image.tmdb.org/t/p/w300{{popular.poster_path}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{popular.title}}</h5>
+          <button  (click)= "navegar(popular.id)" class="btn btn-outline-info" type="button" name="button">Detalles</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

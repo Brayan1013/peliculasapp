@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row pt-5">
+    <div class="col-md-4">
+      <img src="http://image.tmdb.org/t/p/w300{{pelicula.poster_path}}" alt="">
+    </div>
+    <div class="col-md-8">
+      <h1>{{pelicula.original_title}}</h1>
+      <p>{{pelicula.overview}}</p>
+    <a [routerLink]="['/home']" type="button" class="btn btn-success">Regresar</a>
+    </div>
+  </div>
+
+  <!--><div class="row text-center">
+    <div class="col" *ngFor="let Productora of pelicula.production_companies">
+      <img src="http://image.tmdb.org/t/p/w300{{Productora.logo_path}}" alt="">
+    </div>
+  </div>
+  <-->
+
+
+</div>
